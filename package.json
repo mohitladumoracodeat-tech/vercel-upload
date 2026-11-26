@@ -1,0 +1,11 @@
+{
+  "name": "online-quiz-platform-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix vercel-upload run dev",
+    "build": "npm --prefix vercel-upload run build",
+    "preview": "npm --prefix vercel-upload run preview",
+    "lint": "npm --prefix vercel-upload run lint"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd vercel-upload && npm install && npm run build",
+  "outputDirectory": "vercel-upload/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

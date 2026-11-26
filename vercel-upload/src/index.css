@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    min-height: 100vh;
+  }
+
+  /* Dark mode root styles */
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    border: none;
+    text-align: left;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+/* SweetAlert custom styling overrides */
+.swal2-popup {
+  border-radius: 1rem !important;
+  font-family: inherit !important;
+  padding: 1.5rem !important;
+}
+
+.dark .swal2-popup {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid #1e293b !important;
+}
+
+.dark .swal2-title {
+  color: #f8fafc !important;
+}
+
+.dark .swal2-html-container {
+  color: #94a3b8 !important;
+}
